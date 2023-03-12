@@ -1,4 +1,4 @@
-import { BasicUser } from "../types/common";
+import { User } from "../types/omitExample";
 
 export const fetchUsers = async () => {
   const url: string = "https://jsonplaceholder.typicode.com/users";
@@ -18,7 +18,7 @@ export const fetchUsers = async () => {
   }
 };
 
-export const createUser = async (user: BasicUser) => {
+export const createUser = async (user: User) => {
   const url: string = "https://jsonplaceholder.typicode.com/users";
 
   try {

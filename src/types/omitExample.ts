@@ -29,12 +29,16 @@ export type User = {
 };
 
 // we can pick + exclude the props we need and define as a new type !!
-export type BasicUser = Omit<User, "address" | "company" | "website" | "phone">;
+export type OmitUser = Omit<User, "id" | "address" | "company" | "website">;
 
 // we can re-define some props type as we want, below is an common example:
-export interface NewUser extends BasicUser {
-  readonly phone: number;
+export interface UserAsClass extends OmitUser {
+  readonly id: string;
 }
 
 // new defined NewUser can be exported as class
-export class NewUser {}
+export class UserAsClass {}
+
+export interface UserAsInterface extends OmitUser {
+  readonly id: string;
+}

@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { BasicUser } from "../types/common";
+import { User } from "../types/omitExample";
 import { createUser } from "../utils/api";
 
 export const useUsersMutation = () => {
@@ -7,11 +7,11 @@ export const useUsersMutation = () => {
 
   const create = useMutation({
     mutationFn: createUser,
-    onMutate: async (user: BasicUser) => {
+    onMutate: async (user: User) => {
       await queryClient.cancelQueries({ queryKey: ["users"] });
       console.log("new user: ", user);
 
-      queryClient.setQueryData<any>(["users"], (users: BasicUser[]) => [
+      queryClient.setQueryData<any>(["users"], (users: User[]) => [
         ...users,
         user,
       ]);
