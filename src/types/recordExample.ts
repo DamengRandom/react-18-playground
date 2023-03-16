@@ -1,24 +1,12 @@
 // https://www.youtube.com/watch?v=tD7DM99nH30
 
+import { mockUsers } from "../mocks/exampleMocks";
+
 interface User {
   name: string;
   id: number;
   email?: string;
 }
-
-// @TODO put it inside exampleMock.ts file
-const mockUsers = [
-  {
-    name: "Test",
-    id: 121,
-    email: "test@test.co",
-  },
-  {
-    name: "Unknown",
-    id: 522,
-    email: "co@co.co",
-  },
-];
 
 type UserWithoutId = Omit<User, "id">;
 

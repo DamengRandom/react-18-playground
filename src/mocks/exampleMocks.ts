@@ -21,3 +21,16 @@ export class NewUserInstance implements UserAsClass {
     readonly phone: string
   ) {}
 } // https://www.typescriptlang.org/docs/handbook/modules.html
+
+export const mockUsers = [
+  {
+    name: "Test",
+    id: 121,
+    email: "test@test.co",
+  },
+  {
+    name: "Unknown",
+    id: 522,
+    email: "co@co.co",
+  },
+];
