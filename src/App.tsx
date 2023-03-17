@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./App.css";
+// import RQD from "./components/RQD";
 import Posts from "./components/Posts";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <QueryClientProvider client={client}>
       <div className="App">
         <Posts />
+        {/* <RQD /> */}
       </div>
     </QueryClientProvider>
   );
