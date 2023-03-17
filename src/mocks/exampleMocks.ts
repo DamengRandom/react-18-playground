@@ -22,6 +22,8 @@ export class NewUserInstance implements UserAsClass {
   ) {}
 } // https://www.typescriptlang.org/docs/handbook/modules.html
 
+// Mock data
+
 export const mockUsers = [
   {
     name: "Test",
