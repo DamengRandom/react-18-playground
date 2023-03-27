@@ -6,7 +6,9 @@
 npm run dev // Start app locally
 
 // Try to run a specific typescript file for interface result testing
-npx ts-node --esm src/types/overrideExample.ts
+npx ts-node --esm src/types/fileName.ts
+// Example:
+// npx ts-node --esm src/types/overrideExample.ts
 ```
 
 ## Topics covered
